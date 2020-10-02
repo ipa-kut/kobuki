@@ -41,6 +41,13 @@
       <kd>100.0</kd>
       <minDepth>0.001</minDepth>
       <maxVel>1.0</maxVel>
+      <sensor type="contact" name="caster_front">
+        <always_on>1</always_on>
+        <update_rate>50.0</update_rate>
+        <visualize>true</visualize>
+        <contact>
+          <collision>base_footprint_fixed_joint_lump__caster_front_link_collision_2</collision>
+        </contact>
     </gazebo>
 
     <gazebo reference="caster_back_link">
@@ -50,6 +57,13 @@
       <kd>100.0</kd>
       <minDepth>0.001</minDepth>
       <maxVel>1.0</maxVel>
+      <sensor type="contact" name="caster_back">
+        <always_on>1</always_on>
+        <update_rate>50.0</update_rate>
+        <visualize>true</visualize>
+        <contact>
+          <collision>base_footprint_fixed_joint_lump__caster_back_link_collision_1</collision>
+        </contact>
     </gazebo>
 
     <gazebo reference="base_link">
@@ -200,6 +214,8 @@
         <imu_name>imu</imu_name>
         <wheel_left_sensor_name>wheel_left</wheel_left_sensor_name>
         <wheel_right_sensor_name>wheel_right</wheel_right_sensor_name>
+        <caster_front_sensor_name>caster_front</caster_front_sensor_name>
+        <caster_back_sensor_name>caster_back</caster_back_sensor_name>
       </plugin>
     </gazebo>
   </xacro:macro>
