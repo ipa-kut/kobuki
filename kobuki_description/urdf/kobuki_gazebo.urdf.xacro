@@ -16,6 +16,13 @@
         <contact>
           <collision>wheel_left_link_collision</collision>
         </contact>
+        <plugin name="wheel_left" filename="libgazebo_ros_bumper.so">
+          <alwaysOn>true</alwaysOn>
+          <update_rate>30.0</update_rate>
+          <bumperTopicName>/gazebo/contact/wheel_left</bumperTopicName>
+          <frameName>wheel_left_contact</frameName>
+        </plugin>
+      </sensor>
     </gazebo>
 
     <gazebo reference="wheel_right_link">
@@ -32,6 +39,13 @@
         <contact>
           <collision>wheel_right_link_collision</collision>
         </contact>
+        <plugin name="wheel_right" filename="libgazebo_ros_bumper.so">
+          <alwaysOn>true</alwaysOn>
+          <update_rate>30.0</update_rate>
+          <bumperTopicName>/gazebo/contact/wheel_right</bumperTopicName>
+          <frameName>wheel_right_contact</frameName>
+        </plugin>
+      </sensor>
     </gazebo>
 
     <gazebo reference="caster_front_link">
