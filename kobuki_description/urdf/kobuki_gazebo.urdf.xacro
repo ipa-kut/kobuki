@@ -62,6 +62,13 @@
         <contact>
           <collision>base_footprint_fixed_joint_lump__caster_front_link_collision_2</collision>
         </contact>
+        <plugin name="caster_front" filename="libgazebo_ros_bumper.so">
+          <alwaysOn>true</alwaysOn>
+          <update_rate>30.0</update_rate>
+          <bumperTopicName>/gazebo/contact/caster_front</bumperTopicName>
+          <frameName>caster_front_contact</frameName>
+        </plugin>
+      </sensor>
     </gazebo>
 
     <gazebo reference="caster_back_link">
@@ -78,6 +85,13 @@
         <contact>
           <collision>base_footprint_fixed_joint_lump__caster_back_link_collision_1</collision>
         </contact>
+        <plugin name="caster_back" filename="libgazebo_ros_bumper.so">
+          <alwaysOn>true</alwaysOn>
+          <update_rate>30.0</update_rate>
+          <bumperTopicName>/gazebo/contact/caster_back</bumperTopicName>
+          <frameName>caster_back_contact</frameName>
+        </plugin>
+      </sensor>
     </gazebo>
 
     <gazebo reference="base_link">
